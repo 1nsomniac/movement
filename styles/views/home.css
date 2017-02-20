@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
 .image-text {
     position:absolute;
     display: flex;
     right: 10px;
     top: 5px;
     text-align: center;
-    width: 230px;
     justify-content: space-between;
     font-size: 15px;
 }
@@ -12,6 +18,7 @@
 .image-text-links {
         align-self: center;
         color: white;
+        padding: 4px;
 }
 
 .profile-pic {
@@ -39,4 +46,14 @@ a:hover {
 a:active {
     color: dimgray;
      text-decoration: none;
+}
+
+
+
+canvas {
+        position: absolute;
+     top: 8px; 
+     left: 8px; 
+     opacity: .8; 
+     height: 32px;
 }

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/base/reset.css">
+    <!--<link rel="stylesheet" href="styles/base/reset.css">
     <link rel="stylesheet" href="styles/fonts/fonts.css">
     <link rel="stylesheet" href="styles/views/home.css">
-    <link rel="stylesheet" href="styles/views/settings.css">
+    <link rel="stylesheet" href="styles/views/settings.css">-->
+    <link rel="stylesheet" href="dist/bundle.css">
 </head>
-<body ng-controller="homeController">
+<body ng-controller="homeController" onload="startTime()">
 <div ng-style="img">
    <div class = "image-text">
        <div class ="image-text-links">
@@ -18,7 +19,7 @@
 		</div>	
 </div>
 
-<div style="background-color:{{weatherColor}}">
+<!--<div style="background-color:{{weatherColor}}">
 
 
 
@@ -27,8 +28,15 @@
     {{weatherColor}}
     
     </div>
-    hello000
+    hello000-->
+
+    <div class = "canvas">
 <canvas id="rain" width = "32" height = "32"></canvas>
+<!--<img class = "darkSky" src = https://darksky.net/dev/img/attribution/poweredby.png>-->
+
+</div>
+
+<div id="txt"></div>
 
 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Radish_3371103037_4ab07db0bf_o.jpg/220px-Radish_3371103037_4ab07db0bf_o.jpg" alt="Smiley face">-->
 
@@ -37,25 +45,16 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-<script src="js/app.js"></script>
+<!--<script src="js/app.js"></script>
 <script src="js/controllers/homeController.js"></script>
 <script src="js/controllers/settingsController.js"></script>
 <script src="js/services/service.js"></script>
-<script src="js/other/skycons.js"></script>
-
+<script src="js/other/skycons.js"></script>-->
+<script src="dist/bundle.js"></script>
+<script src="js/services/service.js"></script>
+<script src="other/skycons.js"></script>
     <script>
-      var icons = new Skycons(),
-          list  = [
-            "clear-day", "clear-night", "partly-cloudy-day",
-            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-            "fog"
-          ],
-          i;
 
-      for(i = list.length; i--; )
-        icons.set(list[i], list[i]);
-
-      icons.play();
       
 </script>
 </body>

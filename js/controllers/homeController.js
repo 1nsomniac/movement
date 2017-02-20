@@ -2,13 +2,29 @@ angular.module('movement').controller('homeController', function($state, $scope,
     
 $scope.apiCall = function(searchTerm){
     service.apiCall(searchTerm).then(function(results){
+      
+
         $scope.apiData = results.data
-        console.log(results.data)
+
         $scope.weatherColor = "#" + invertHex(results.data.color.substring(1))
-        var potato = "url(" + $scope.apiData.urls.full + ")"
+        console.log($scope.weatherColor)
+        var backgroundUrl = "url(" + $scope.apiData.urls.full + ")"
+
+        var icons = new Skycons({"color": $scope.weatherColor}),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+      for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+
+      icons.play();
 
 $scope.img = {
-        "background": potato,
+        "background": backgroundUrl,
         "font-size" : "12px",
         "width": "100vw",
     "background-size": "cover",
@@ -118,7 +134,7 @@ function invertHex(hexnum){
   complexnum.E = "1";
   complexnum.F = "0";
 	
-  for(i=0; i<6; i++){
+  for(var i=0; i<6; i++){
     if(!isNaN(splitnum[i])) {
       resultnum += simplenum[splitnum[i]]; 
     } else if(complexnum[splitnum[i]]){

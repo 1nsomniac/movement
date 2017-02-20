@@ -2,7 +2,7 @@ angular.module('movement').directive("weatherIcons", function($scope){
     
     
     
-    <script>
+    /*<script>
       var skycons = new Skycons({"color": $scope.weatherColor}),
           list  = [
             "clear-day", "clear-night", "partly-cloudy-day",
@@ -16,5 +16,5 @@ angular.module('movement').directive("weatherIcons", function($scope){
 
       icons.play();
       
-</script>
+</script>*/
 })
