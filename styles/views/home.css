@@ -1,0 +1,42 @@
+.image-text {
+    position:absolute;
+    display: flex;
+    right: 10px;
+    top: 5px;
+    text-align: center;
+    width: 230px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.image-text-links {
+        align-self: center;
+        color: white;
+}
+
+.profile-pic {
+    border-radius: 50%
+}
+/* unvisited link */
+a:link {
+    color:white;
+     text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: lightgray;
+     text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightslategrey;
+     text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: dimgray;
+     text-decoration: none;
+}
