@@ -7,6 +7,15 @@
     width: 230px;
     justify-content: space-between;
     font-size: 15px;
+    opacity: .3;
+}
+
+.image-text > img:hover {
+    border-radius: 90%;
+}
+
+.image-text:hover {
+    opacity: .8;
 }
 
 .image-text-links {
