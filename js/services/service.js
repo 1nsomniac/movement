@@ -16,7 +16,7 @@ this.apiCall = function (searchTerm){
 this.weatherCall = function (coordinates){
     return $http ({
         method: 'GET',
-        url: 'https://api.darksky.net/forecast/d90369b5ef37b9401bddc2e14747f930/' + '37.8267,-122.4233'
+        url: 'https://api.darksky.net/forecast/d90369b5ef37b9401bddc2e14747f930/' + coordinates
     })
 }
 
