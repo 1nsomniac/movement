@@ -18,7 +18,7 @@ $scope.img = {
     })
 }
 $scope.hello = 'hello'
-$scope.apiCall("sunrise")
+$scope.apiCall("temple")
 
 $scope.locationCall = function(){
     service.locationCall().then(function(results){
